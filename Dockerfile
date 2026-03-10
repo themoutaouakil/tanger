@@ -1,4 +1,5 @@
 # Dockerfile for Next.js on Dokploy
+# Build version: 2026-03-10-v2
 FROM node:18-alpine AS base
 
 # Install dependencies only when needed
