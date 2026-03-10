@@ -1,28 +1,21 @@
 import Link from "next/link";
-import { ProcessusService } from "@/application/processus/ProcessusService";
 
 /**
  * Presentation Component: ProcessusSection
  * Displays the "Processus" section
  */
 export default function ProcessusSection() {
-  let content;
-  try {
-    const service = new ProcessusService();
-    content = service.getContent();
-  } catch (error) {
-    // Fallback content if service fails
-    content = {
-      title: "Processus",
-      steps: [
-        "Évaluation du profil",
-        "Analyse des options possibles",
-        "Constitution du dossier",
-        "Soumission et suivi",
-        "Accompagnement jusqu'à la décision finale"
-      ]
-    };
-  }
+  // Static content to avoid any service/domain layer issues
+  const content = {
+    title: "Processus",
+    steps: [
+      "Évaluation du profil",
+      "Analyse des options possibles",
+      "Constitution du dossier",
+      "Soumission et suivi",
+      "Accompagnement jusqu'à la décision finale"
+    ]
+  };
 
   return (
     <section className="py-20 md:py-32 bg-gray-50" id="processus">

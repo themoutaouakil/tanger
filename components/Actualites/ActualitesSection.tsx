@@ -1,28 +1,21 @@
 import Link from "next/link";
-import { ActualitesService } from "@/application/actualites/ActualitesService";
 
 /**
  * Presentation Component: ActualitesSection
  * Displays the "Actualités" section
  */
 export default function ActualitesSection() {
-  let content;
-  try {
-    const service = new ActualitesService();
-    content = service.getContent();
-  } catch (error) {
-    // Fallback content if service fails
-    content = {
-      title: "Actualités",
-      topics: [
-        "Programmes d'immigration",
-        "Erreurs à éviter dans un dossier (fraude, falsification, etc.)",
-        "Différence entre le visa et la résidence permanente",
-        "Conseils pour réussir son projet d'installation au Canada",
-        "Témoignages clients"
-      ]
-    };
-  }
+  // Static content to avoid any service/domain layer issues
+  const content = {
+    title: "Actualités",
+    topics: [
+      "Programmes d'immigration",
+      "Erreurs à éviter dans un dossier (fraude, falsification, etc.)",
+      "Différence entre le visa et la résidence permanente",
+      "Conseils pour réussir son projet d'installation au Canada",
+      "Témoignages clients"
+    ]
+  };
 
   return (
     <section className="py-20 md:py-32 bg-white" id="actualites">

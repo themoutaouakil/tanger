@@ -1,28 +1,20 @@
-import { WhyChooseUsService } from "@/application/why-choose-us/WhyChooseUsService";
-
 /**
  * Presentation Component: WhyChooseUsSection
  * Displays the "Pourquoi nous choisir" section
  */
 export default function WhyChooseUsSection() {
-  let content;
-  try {
-    const service = new WhyChooseUsService();
-    content = service.getContent();
-  } catch (error) {
-    // Fallback content if service fails
-    content = {
-      title: "Pourquoi nous choisir ?",
-      subtitle: "Nous sommes un cabinet qui assure :",
-      features: [
-        "Accompagnement personnalisé",
-        "Étude de dossier détaillée",
-        "Transparence des procédures et des frais",
-        "Suivi du début à la fin",
-        "Équipe qualifiée et à l'écoute"
-      ]
-    };
-  }
+  // Static content to avoid any service/domain layer issues
+  const content = {
+    title: "Pourquoi nous choisir ?",
+    subtitle: "Nous sommes un cabinet qui assure :",
+    features: [
+      "Accompagnement personnalisé",
+      "Étude de dossier détaillée",
+      "Transparence des procédures et des frais",
+      "Suivi du début à la fin",
+      "Équipe qualifiée et à l'écoute"
+    ]
+  };
 
   return (
     <section className="py-20 md:py-32 bg-white" id="pourquoi-nous-choisir">
