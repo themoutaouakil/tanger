@@ -32,7 +32,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-4">Contact</h4>
             <p className="text-gray-400 leading-relaxed">
-              +212 5 39 XX XX XX<br />
+              +212 664-691297<br />
               tanger@imigo-immigration.ma<br />
               Tanger, Maroc
             </p>
