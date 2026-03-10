@@ -24,8 +24,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <h4 className="text-lg font-bold mb-4">IMIGO Immigration Tanger</h4>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 leading-relaxed mb-2">
               Cabinet agréé spécialisé dans l'immigration au Canada. Votre partenaire de confiance depuis 15 ans.
+            </p>
+            <p className="text-gray-400 text-sm">
+              Directrice : LAGROUBI Zineb
             </p>
           </div>
 
@@ -34,6 +37,9 @@ export default function Footer() {
             <p className="text-gray-400 leading-relaxed">
               +212 664-691297<br />
               tanger@imigo-immigration.ma<br />
+              7ème étage, Ben Abdelah MM Challah<br />
+              Office Center, N° 39<br />
+              Rue Allal Ben Abdellah<br />
               Tanger, Maroc
             </p>
           </div>

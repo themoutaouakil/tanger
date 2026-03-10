@@ -297,7 +297,8 @@ export default function Contact() {
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
             <circle cx="12" cy="10" r="3"/>
           </svg>
-          <p className="text-xl text-gray-600">Carte Google Maps - Bureau IMIGO Tanger</p>
+          <p className="text-xl text-gray-600">Carte Google Maps</p>
+          <p className="text-gray-500 mt-2">7ème étage, Office Center, N° 39 Rue Allal Ben Abdellah, Tanger</p>
         </div>
       </section>
     </>
@@ -307,7 +308,7 @@ export default function Contact() {
 const contactInfo = [
   {
     title: "Adresse",
-    content: "Bureau IMIGO Tanger<br/>[Adresse complète]<br/>Tanger, Maroc",
+    content: "7ème étage, Ben Abdelah MM Challah<br/>Office Center, N° 39<br/>Rue Allal Ben Abdellah<br/>Tanger, Maroc<br/><br/><strong>Directrice :</strong> LAGROUBI Zineb",
     icon: <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>,
   },
   {
