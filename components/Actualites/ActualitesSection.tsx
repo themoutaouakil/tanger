@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import Link from "next/link";
 import { ActualitesService } from "@/application/actualites/ActualitesService";
 
@@ -8,8 +9,10 @@ import { ActualitesService } from "@/application/actualites/ActualitesService";
  * Displays the "Actualités" section
  */
 export default function ActualitesSection() {
-  const service = new ActualitesService();
-  const content = service.getContent();
+  const content = useMemo(() => {
+    const service = new ActualitesService();
+    return service.getContent();
+  }, []);
 
   return (
     <section className="py-20 md:py-32 bg-white" id="actualites">

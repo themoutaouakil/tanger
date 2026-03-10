@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import Link from "next/link";
 import { ProcessusService } from "@/application/processus/ProcessusService";
 
@@ -8,8 +9,10 @@ import { ProcessusService } from "@/application/processus/ProcessusService";
  * Displays the "Processus" section
  */
 export default function ProcessusSection() {
-  const service = new ProcessusService();
-  const content = service.getContent();
+  const content = useMemo(() => {
+    const service = new ProcessusService();
+    return service.getContent();
+  }, []);
 
   return (
     <section className="py-20 md:py-32 bg-gray-50" id="processus">

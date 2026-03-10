@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import { WhyChooseUsService } from "@/application/why-choose-us/WhyChooseUsService";
 
 /**
@@ -7,8 +8,10 @@ import { WhyChooseUsService } from "@/application/why-choose-us/WhyChooseUsServi
  * Displays the "Pourquoi nous choisir" section
  */
 export default function WhyChooseUsSection() {
-  const service = new WhyChooseUsService();
-  const content = service.getContent();
+  const content = useMemo(() => {
+    const service = new WhyChooseUsService();
+    return service.getContent();
+  }, []);
 
   return (
     <section className="py-20 md:py-32 bg-white" id="pourquoi-nous-choisir">

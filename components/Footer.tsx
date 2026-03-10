@@ -1,23 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { SocialMediaService } from "@/application/social-media/SocialMediaService";
 
 export default function Footer() {
-  let socialMedia;
-  try {
-    const socialMediaService = new SocialMediaService();
-    socialMedia = socialMediaService.getContent();
-  } catch (error) {
-    // Fallback if service fails
-    socialMedia = {
-      title: "Réseaux sociaux",
-      links: [
-        { name: "LinkedIn", url: "#", icon: "linkedin" },
-        { name: "Instagram", url: "#", icon: "instagram" }
-      ]
-    };
-  }
+  // Static social media data to avoid hydration issues
+  const socialMedia = {
+    title: "Réseaux sociaux",
+    links: [
+      { name: "LinkedIn", url: "#", icon: "linkedin" },
+      { name: "Instagram", url: "#", icon: "instagram" }
+    ]
+  };
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container py-16">
