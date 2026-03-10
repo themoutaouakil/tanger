@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import WhyChooseUsSection from "@/components/WhyChooseUs/WhyChooseUsSection";
 
 export default function Home() {
   return (
@@ -92,6 +93,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUsSection />
 
       {/* Benefits Section */}
       <section className="py-20 md:py-32" id="avantages">
