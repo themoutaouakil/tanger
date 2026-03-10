@@ -26,7 +26,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-4">Contact</h4>
             <p className="text-gray-400 leading-relaxed">
-              <a href="tel:+212664691297" className="hover:text-white transition-colors">+212 664-691297</a><br />
+              <a href="tel:+212539000000" className="hover:text-white transition-colors">+212 5 39 XX XX XX</a><br />
               <a href="mailto:tanger@imigo-immigration.ma" className="hover:text-white transition-colors">tanger@imigo-immigration.ma</a><br />
               7ème étage, Ben Abdelah MM Challah<br />
               Office Center, N° 39<br />
