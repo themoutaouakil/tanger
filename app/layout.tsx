@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ClientLayout from "@/components/ClientLayout";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import ChunkErrorHandler from "@/components/ChunkErrorHandler";
 
 export const metadata: Metadata = {
   title: "IMIGO Immigration Tanger - Votre nouvelle vie au Canada",
@@ -20,6 +21,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <ErrorBoundary>
+          <ChunkErrorHandler />
           <ClientLayout>{children}</ClientLayout>
         </ErrorBoundary>
       </body>

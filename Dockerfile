@@ -18,6 +18,10 @@ COPY . .
 
 # Set environment variables for build
 ENV NEXT_TELEMETRY_DISABLED 1
+ENV NODE_ENV production
+
+# Clean any existing build artifacts
+RUN rm -rf .next
 
 # Build Next.js
 RUN npm run build
