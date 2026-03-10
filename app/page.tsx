@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import WhyChooseUsSection from "@/components/WhyChooseUs/WhyChooseUsSection";
 import ProcessusSection from "@/components/Processus/ProcessusSection";
+import ActualitesSection from "@/components/Actualites/ActualitesSection";
 
 export default function Home() {
   return (
@@ -122,6 +123,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Actualités Section */}
+      <ActualitesSection />
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-20">
