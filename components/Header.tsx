@@ -1,20 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [pathname, setPathname] = useState<string>("");
+  let pathname: string | null = null;
   
-  const currentPathname = usePathname();
-  
-  useEffect(() => {
-    if (currentPathname) {
-      setPathname(currentPathname);
-    }
-  }, [currentPathname]);
+  try {
+    pathname = usePathname();
+  } catch (error) {
+    // Fallback if usePathname fails
+    pathname = null;
+  }
 
   const navLinks = [
     { href: "/", label: "Accueil" },
@@ -24,7 +23,7 @@ export default function Header() {
     { href: "/contact", label: "Contact" },
   ];
 
-  const isActive = (href: string) => pathname === href;
+  const isActive = (href: string) => pathname !== null && pathname === href;
 
   return (
     <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-lg border-b border-gray-100 shadow-sm">
