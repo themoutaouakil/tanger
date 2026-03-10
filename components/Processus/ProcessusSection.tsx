@@ -6,8 +6,23 @@ import { ProcessusService } from "@/application/processus/ProcessusService";
  * Displays the "Processus" section
  */
 export default function ProcessusSection() {
-  const service = new ProcessusService();
-  const content = service.getContent();
+  let content;
+  try {
+    const service = new ProcessusService();
+    content = service.getContent();
+  } catch (error) {
+    // Fallback content if service fails
+    content = {
+      title: "Processus",
+      steps: [
+        "Évaluation du profil",
+        "Analyse des options possibles",
+        "Constitution du dossier",
+        "Soumission et suivi",
+        "Accompagnement jusqu'à la décision finale"
+      ]
+    };
+  }
 
   return (
     <section className="py-20 md:py-32 bg-gray-50" id="processus">
