@@ -6,14 +6,7 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  let pathname: string | null = null;
-  
-  try {
-    pathname = usePathname();
-  } catch (error) {
-    // Fallback if usePathname fails
-    pathname = null;
-  }
+  const pathname = usePathname();
 
   const navLinks = [
     { href: "/", label: "Accueil" },

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
+import ClientLayout from "@/components/ClientLayout";
 
 export const metadata: Metadata = {
   title: "IMIGO Immigration Tanger - Votre nouvelle vie au Canada",
@@ -20,10 +18,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="https://imigoimmigration.com/wp-content/uploads/2023/12/m-imigo-2-1.png" />
       </head>
       <body className="antialiased">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <ScrollToTop />
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
