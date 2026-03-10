@@ -1,12 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const [pathname, setPathname] = useState<string>("");
+  
+  const currentPathname = usePathname();
+  
+  useEffect(() => {
+    if (currentPathname) {
+      setPathname(currentPathname);
+    }
+  }, [currentPathname]);
 
   const navLinks = [
     { href: "/", label: "Accueil" },
