@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientLayout from "@/components/ClientLayout";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 export const metadata: Metadata = {
   title: "IMIGO Immigration Tanger - Votre nouvelle vie au Canada",
@@ -18,7 +19,9 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="https://imigoimmigration.com/wp-content/uploads/2023/12/m-imigo-2-1.png" />
       </head>
       <body className="antialiased">
-        <ClientLayout>{children}</ClientLayout>
+        <ErrorBoundary>
+          <ClientLayout>{children}</ClientLayout>
+        </ErrorBoundary>
       </body>
     </html>
   );

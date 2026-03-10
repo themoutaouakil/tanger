@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const pathname = usePathname() || "";
 
   const navLinks = [
     { href: "/", label: "Accueil" },
@@ -16,7 +16,7 @@ export default function Header() {
     { href: "/contact", label: "Contact" },
   ];
 
-  const isActive = (href: string) => pathname !== null && pathname === href;
+  const isActive = (href: string) => pathname === href;
 
   return (
     <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-lg border-b border-gray-100 shadow-sm">
