@@ -12,7 +12,14 @@ export class WhyChooseUsService {
   getContent(): WhyChooseUsContent {
     return WhyChooseUsContentVO.create(
       "Pourquoi nous choisir ?",
-      "Nous sommes un cabinet qui assure :"
+      "Nous sommes un cabinet qui assure :",
+      [
+        "Accompagnement personnalisé",
+        "Étude de dossier détaillée",
+        "Transparence des procédures et des frais",
+        "Suivi du début à la fin",
+        "Équipe qualifiée et à l'écoute"
+      ]
     );
   }
 }
