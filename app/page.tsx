@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import WhyChooseUsSection from "@/components/WhyChooseUs/WhyChooseUsSection";
 import ProcessusSection from "@/components/Processus/ProcessusSection";
 import ActualitesSection from "@/components/Actualites/ActualitesSection";
